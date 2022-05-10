@@ -6,10 +6,15 @@
         xmlns:local="clr-namespace:starpTool"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
+
     <Grid>
+
         <!--https://stackoverflow.com/questions/833943/watermark-hint-placeholder-text-in-textbox-->
         <Button Content="跳转目录" HorizontalAlignment="Left" Margin="292,319,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <Grid Margin="201,249,328,130">
+        <Button  Content="去git 管理" HorizontalAlignment="Left" Margin="192,319,0,0" VerticalAlignment="Top" Width="75" Click="toGitManager"/>
+
+        <Grid  Margin="201,249,328,130">
             <!--Margin="172,244,0,137"-->
             <TextBox  Width="252"  VerticalAlignment="Center" HorizontalAlignment="Left" x:Name="SearchTermTextBox"  Height="38"/>
             <!--Margin="172,259,0,137"-->
@@ -27,6 +32,18 @@
                     </Style>
                 </TextBlock.Style></TextBlock>
         </Grid>
+
         <TextBox  Width="284"  VerticalAlignment="Center" HorizontalAlignment="Left" x:Name="tbResult"  Height="77" Margin="173,122,0,220"/>
+
+        <TextBlock FontSize="24" TextWrapping="Wrap" Margin="400,304,235,97">
+
+        <Hyperlink x:Name="LnkPre" NavigateUri="/top/starp/util/window/GitManagerWindow.xaml.xaml" Foreground="Black">
+
+            git管理
+
+            </Hyperlink>
+
+        </TextBlock>
+        <Frame x:Name="Nav" Width="318" HorizontalAlignment="Right" Margin="0,39,0,0" ></Frame>
     </Grid>
 </Window>

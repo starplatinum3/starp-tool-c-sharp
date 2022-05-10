@@ -17,6 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
+using starpTool.top.starp.util.window;
 //中间使用
 
 namespace starpTool
@@ -31,6 +32,17 @@ namespace starpTool
             InitializeComponent();
         }
 
+        void toGitManager(object sender, RoutedEventArgs e)
+        {
+            GitManagerWindow gitManagerWindow=  new GitManagerWindow();
+            Nav.Content = gitManagerWindow;
+        }
+
+        //private void Link2_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Page2 p2 = new Page2();
+        //    Nav.Content = p2;
+        //}
 
         //https://blog.csdn.net/hbqhdlc/article/details/6843650
 
